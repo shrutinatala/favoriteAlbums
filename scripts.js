@@ -19,7 +19,6 @@ const THRILLER_IMAGE="Album Covers/thriller.webp";
 const KID_A_IMAGE="Album Covers/kid a.jpeg";
 const IGOR_IMAGE="Album Covers/igor.jpeg";
 const YEEZUS_IMAGE="Album Covers/yeezus.webp";
-
 const THE_SLOW_RUSH_IMAGE = "Album Covers/the slow rush.jpg";
 const EVENING_WITH_SILK_SONIC_IMAGE = "Album Covers/an evening with silk sonic.webp";
 const CHRISTMAS_ALBUM_IMAGE = "Album Covers/christmas album.jpeg";
