@@ -15,7 +15,7 @@ I wanted to theme my website around the experience of browsing through a stack o
 - Users can use the search bar to search up album titles, years, artists, and my favorite tracks.
 - Users can sort through the albums by album title, artist, newest/oldest, and by the decade made.
 - Clicking on each of the buttons once will toggle to the opposite order when clicked again. For example, after clicked "Newest to Oldest", the button will change to "Oldest to Newest". When the user clicks "Oldest to Newest", the order will reverse.
-- New albums can be added by logging in. The password to login is "snap".
+- New albums can be added by logging in. The password to login is "snap". The idea was that only I would be able to add new albums, hence the login form, but try it out!
 - Clicking on the reset button or the title of the website will return the list of albums to their original configuration and remove all albums added through the form on the website.
 
 I hope you enjoy my website and find some new music!
