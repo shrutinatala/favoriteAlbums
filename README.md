@@ -12,7 +12,8 @@ I wanted to theme my website around the experience of browsing through a stack o
 
 - Hovering on each album will allow you to see the name of the album, year released, artist, and my favorite track.
 - Clicking on each album will take you to a YouTube link with my favorite track.
-- Users can sort through the albums by title, artist, newest/oldest, and by the decade made.
+- Users can use the search bar to search up album titles, years, artists, and my favorite tracks.
+- Users can sort through the albums by album title, artist, newest/oldest, and by the decade made.
 - Clicking on each of the buttons once will toggle to the opposite order when clicked again. For example, after clicked "Newest to Oldest", the button will change to "Oldest to Newest". When the user clicks "Oldest to Newest", the order will reverse.
 - New albums can be added by logging in. The password to login is "snap".
 - Clicking on the reset button or the title of the website will return the list of albums to their original configuration and remove all albums added through the form on the website.
