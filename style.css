@@ -1,0 +1,318 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h4{
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 15;
+    font-weight: normal;
+}
+
+#intro {
+    margin-left: 275px; 
+    margin-right: 275px; 
+    margin-top: -15px; 
+    text-align: center;
+    margin-bottom: 5px
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0);
+  padding-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 8;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: semi-bold;
+  color: black;
+}
+
+#login-container {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-right: 250px;
+}
+
+input[type="password"] {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  border-color: black;
+  height: 40px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  border-color: black;
+  height: 40px;
+}
+
+input[type="number"] {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 4px 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-color: black;
+  height: 30px;
+  width: 82%;
+}
+
+input[type="file"] {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  border-color: black;
+  height: 20px;
+  margin-left: 10px;
+}
+
+#buttons-search {
+  margin-top: 0px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 0px;
+}
+
+#buttons {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; /* Add this line */
+  flex-wrap: wrap; /* Add this line */
+  justify-content: center; /* Add this line */
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.card-content h2 {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.card-content p {
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+#addTitleForm {
+  max-width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+button {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+  border-radius: 0px;
+  margin: 5px;
+  font-size: 15px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: medium;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+}
+
+button:active {
+  color: white;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-bottom: 20px;
+}
+
+.logos:before,
+.logos:after {
+  position: relative;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 30px;
+  margin: 0 5px;
+}
+
+.card {
+  width: 275px;
+  height: 275px; /* Same as width */
+  perspective: 1000px;
+  display: inline-block;
+  margin-top: 20px; /* Add margin between cards */
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card-content {
+  position: absolute;
+  margin-inline: auto;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  font-family: "Reenie Beanie", cursive;
+  background-color: transparent;
+  background-image: url("plastic-504-h-cd-case_copy-removebg-preview.png");
+  background-size: 275px;
+  color: black;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  border-radius: 7px;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.dropbtn {
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
+
+  border-radius: 0px;
+
+  font-size: 15px;
+  margin: 5px;
+
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: medium;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 146px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 15px;
+  font-family: "Pixelify Sans", sans-serif;
+  text-align: center;
+  font-weight: medium;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-content a:active {
+  background-color: black;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
+}

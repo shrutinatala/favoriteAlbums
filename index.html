@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>shruti's favorite albums</title>
+    <link rel="icon" type="image/x-icon" href="cd.png" />
+    <meta name="description" content="Shruti's Favorite Albums" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Permanent+Marker&family=Pixelify+Sans:wght@400..700&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Outfit:wght@100..900&family=Permanent+Marker&family=Pixelify+Sans:wght@400..700&family=Reenie+Beanie&family=Varela&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+
+  <body>
+    <div id="login-container">
+      <input type="password" id="passwordInput" placeholder="Enter Password" />
+      <button id="loginButton" onclick="loggedIn ? logout() : login()">
+        Login
+      </button>
+    </div>
+
+    <header class="main-header">
+      <h1 class="title">shruti's favorite albums</h1>
+      <h4 id="intro">
+        I love sharing music with others.<br />It's pretty diffucult to choose a
+        favorite song from each of this albums but I tried my best!<br />
+        Click on each cards to listen to them. I hope you discover something
+        new!
+      </h4>
+    </header>
+
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="Music Notes/bass.png" alt="Bass" />
+        <img src="Music Notes/eight.png" alt="Eight" />
+        <img src="Music Notes/four.png" alt="Four" />
+        <img src="Music Notes/half triple.png" alt="Half Triple" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/quarter.png" alt="Quarter" />
+        <img src="Music Notes/sixteenth.png" alt="Sixteenth" />
+        <img src="Music Notes/treble.png" alt="Treble" />
+        <img src="Music Notes/triple.png" alt="Triple" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/four.png" alt="Four" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/quarter.png" alt="Quarter" />
+        <img src="Music Notes/sixteenth.png" alt="Sixteenth" />
+        <img src="Music Notes/bass.png" alt="Bass" />
+        <img src="Music Notes/half triple.png" alt="Half Triple" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/quarter.png" alt="Quarter" />
+        <img src="Music Notes/sixteenth.png" alt="Sixteenth" />
+        <img src="Music Notes/treble.png" alt="Treble" />
+        <img src="Music Notes/triple.png" alt="Triple" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/quarter.png" alt="Quarter" />
+        <img src="Music Notes/sixteenth.png" alt="Sixteenth" />
+        <img src="Music Notes/bass.png" alt="Bass" />
+        <img src="Music Notes/half triple.png" alt="Half Triple" />
+        <img src="Music Notes/half.png" alt="Half" />
+        <img src="Music Notes/quarter.png" alt="Quarter" />
+        <img src="Music Notes/four.png" alt="Four" />
+      </div>
+    </div>
+
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
+
+    <div id="addTitleForm" style="display: none">
+      <input type="text" id="titleInput" placeholder="Title" /><br />
+      <input type="text" id="artistInput" placeholder="Artist" /><br />
+      <input type="number" id="yearInput" placeholder="Year Released" /><br />
+      <input type="text" id="trackInput" placeholder="Favorite Track" /><br />
+      <input
+        type="text"
+        id="youtubeLinkInput"
+        placeholder="YouTube Link"
+      /><br />
+      <input type="file" id="imageInput" onchange="previewImage(event)" /><br />
+      <button
+        style="margin-left: 110px; margin-bottom: 20px; margin-top: 10px"
+        onclick="addNewTitle()"
+      >
+        Enter
+      </button>
+    </div>
+
+    <div id="buttons-search">
+      <input type="text" id="searchInput" placeholder="Search" />
+      <button onclick="search(document.getElementById('searchInput').value)">
+        Search
+      </button>
+    </div>
+
+    <div id="buttons">
+      <button id="azButton" onclick="reorderCardsByTitle()">
+        Sort Titles A-Z
+      </button>
+      <button id="artistButton" onclick="reorderCardsByArtist()">
+        Sort Artists A-Z
+      </button>
+      <button id="toggleButton" onclick="toggleOrder()">
+        Sort Newest to Oldest
+      </button>
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">
+          Sort by Decade
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" onclick="sortByDecade(1960, 1969)">1960s</a>
+          <a href="#" onclick="sortByDecade(1970, 1979)">1970s</a>
+          <a href="#" onclick="sortByDecade(1980, 1989)">1980s</a>
+          <a href="#" onclick="sortByDecade(1990, 1999)">1990s</a>
+          <a href="#" onclick="sortByDecade(2000, 2009)">2000s</a>
+          <a href="#" onclick="sortByDecade(2010, 2019)">2010s</a>
+          <a href="#" onclick="sortByDecade(2020, 2029)">2020s</a>
+        </div>
+      </div>
+      <button onclick="resetOrder()">Reset</button>
+    </div>
+
+    <div class="card" style="display: none">
+      <a class="card-link" href="#" target="_blank">
+        <div class="card-content front">
+          <img src="" alt="Album Cover" />
+        </div>
+        <div class="card-content back">
+          <h2>Title</h2>
+          <p class="year-made"></p>
+          <p class="artist"></p>
+          <p style="margin-top: 20px; font-size: 25px">Favorite Track</p>
+          <p class="best-track"></p>
+        </div>
+      </a>
+    </div>
+
+    <div id="card-container"></div>
+
+    <div class="footer">
+      <h4
+        style="
+          color: white;
+          font-size: 30px;
+          font-family: 'Reenie Beanie', cursive;
+        "
+      >
+        Built in San Diego
+      </h4>
+    </div>
+  </body>
+</html>
