@@ -47,7 +47,7 @@ let titles = [
        yearMade: 2007,
        artist: "Radiohead",
        bestTrack: "15 Step",
-       youtubeLink: "https://www.youtube.com/watch?v=9bahTUVLXZw"
+       youtubeLink: "https://www.youtube.com/watch?v=bgsmr7t8zGE"
    },
    {
        title: "Purple Rain",
